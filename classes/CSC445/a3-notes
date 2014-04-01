@@ -1,0 +1,13 @@
+<pre>
+
+Change QuadrantWorker to RecursiveTask: check out 'Usefull Example' <a href="http://homes.cs.washington.edu/~djg/teachingMaterials/grossmanSPAC_forkJoinFramework.html" class="btn btn-primary" target=_blank">Here.</a>
+
+Basic Idiology:
+
+- Use equation as basic 'Task'
+- Fork new task if num points(area of quadrant)>SOME_THRESHOLD
+- Join other tasks
+- compute returns temperature Longs, return calcTemp(x) where x is the computed temps of all tasks
+
+
+</pre>

@@ -1,0 +1,68 @@
+<pre>Control Structures
+Getting ready for <a class="btn btn-success" href="http://en.wikipedia.org/wiki/Prolog" target="_blank">Prolog</a>
+
+if, call/goto/loop
+
+cond -> if
+
+          lambda  //{++x;} Unit -> Unit
+            |
+when(cond, action){if(cond)action();}
+
+when(isOdd(x)){
+  inc(x);
+}
+
+scala control structures
+  * closure-based (if/call/loop)
+  * domain specific
+    - collections
+
+for(T x: call){
+  stuff(x);
+}
+
+//scala
+async{stuff();}
+
+Digression
+
+java swing
+
+event-driven programming
+  inversion of control ("don't call us, we'll call you")
+
+button.addActionListener(...)=={
+  void actionPerformed(...){
+    ;
+  }
+}
+
+What's Happening?
+
+User Clicks --> Send Msg to Event Handler --> ... (never completed this)
+
+MODULARITY
+
+  * scaling development support
+    - lines of code
+    - developers
+    - versions
+    
+  
+  modules/packages
+
+  modules (more generic term, 
+  packages (more specific term,
+
+  hierarchical name space
+    * ownership/responsibility
+    * encapsulation
+    * metadata
+      - version
+
+
+LOGIC PROGRAMMING
+
+  Prolog - Next Time
+  </pre>

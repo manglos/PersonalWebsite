@@ -1,0 +1,27 @@
+<pre>
+
+
+<p class="text-success">Self:
+* Installed ADK/Began Android project (2 hrs)
+* Research RBG Meshes (1 hrs)
+
+Total (3 hrs)
+
+</p>
+
+<h1 class="text-primary">2-5 CLASS - LED Team Requirements</h1>
+* Agreed that project could be more of a modular LED display system rather than stictly a visor
+
+	Use Case (Chris)
+		* User Action - Start application
+		* Application Response - Display Message, "Found x LED meshes within range, click to arrange"
+		* Application Response - Send â"identity" data to each mesh (e.g. a number or color)
+		* Mesh Response - Display 'identity'
+		* User Action - Arrange meshes virtually, using the Android application
+		* Application Response - Display Message, "Does line appear correctly?"
+		* Mesh Response - Display line connecting with each of it's neighbors
+		* User Action - Select "Yes" or "No" response
+		* Application Reponse - If "Yes", move on to next use case, else repeat from third step.
+		
+
+</pre>

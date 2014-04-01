@@ -1,0 +1,91 @@
+<pre>
+<a class="btn btn-primary" href="http://www.csupomona.edu/~jrfisher/www/prolog_tutorial/contents.html" target="_blank">Prolog Tutorial</a>
+
+//Prolog Code
+omit(A, [B|X], [B|Z]) :- omit(A,X,Z).
+
+not(P) :- call(P), !, fail.
+not(P).
+
+/* rooms and paths */
+
+door(a,b).
+door(b,e).
+door(b,c).
+door(d,e).
+door(c,d).
+door(e,f).
+door(g,e).
+
+
+through(X,Y) :- door(X,Y).
+through(Y,X) :- door(X,Y).
+
+unvisited(X, Route) :- nonmember(X,Route).
+
+path(From, From, Route, Route). //base case
+path(From, To, Route, Route) :- through(From, To) //going from to with only 1 door
+path(From, To, Route, R) :- through(From,Middle),
+                            unvisited(Middle,Route),
+                            path(Middle,To, [Middle|Route]//prolog version of cons , R).
+
+//End Code
+
+
+Types Revisited:
+
+  int x;
+  hasType(x, int).
+
+  hastype(y, ArrayBuffer).
+
+  declaration --> predicate
+
+  rules:
+    subclass rule
+
+
+  suppose
+
+  class A{
+    int f(); //hasmethod(A, f)
+  }
+
+  class B extends A{}
+
+  B b;
+  hastype(b, A)?//type-checking (subclass rule)
+
+  val b = new B(); //type inference
+
+
+  hastype(x, U) :- hastype(x, T), isSubclass(T, U)
+  
+  //what about
+  val i = b.f();
+  hasmethod(x, T) :- declairedHasMethod(x, T)
+  hasmethod(x, M) :- hastype(x, T), hasmethod(T, M)
+
+  //we need
+  hasType
+  isSubclass
+  hasMethod
+
+  hasType(A::f, Unit->Int)
+  hasType(x, T) :- canCall(-, M), returns(M, T).
+
+  -----------------------------------------------------
+  Static Analyzers
+    * definite assignment
+    * no uncaught exceptions
+    * no SQL injections errors
+  -----------------------------------------------------
+
+  for assignment 4 what if you have methods that accept function type arguments?
+
+  -----------if you only have two predicates-----------
+    isA
+    hasA
+  -----------------------------------------------------
+
+ </pre> 

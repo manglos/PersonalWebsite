@@ -1,0 +1,31 @@
+<html>
+<title>My CSC375 Shit</title>
+<head></head>
+<body>
+<h1>CSC375</h1>
+
+<p><h3>Network Testing (Assignment #1)</h3>
+<b>Syracuse To Moxie</b> vs <b>Wolf To Moxie</b> vs <b>Localhost</b></p>
+
+<a href="results.html">Results Doc</a>
+
+<h3>Syracuse to Moxie</h3>
+<img src="graphs-syrtomoxie1.jpg">
+<img src="graphs-syrtomoxie3.jpg">
+<img src="graphs-syrtomoxie2.jpg">
+
+<h3>Wolf to Moxie</h3>
+<img src="graphs-wolftomoxie1.jpg">
+<img src="graphs-wolftomoxie2.jpg">
+<img src="graphs-wolftomoxie3.jpg">
+ 
+<h3>Localhost</h3>
+<img src="graphs-localhost1.jpg">
+<img src="graphs-localhost2.jpg">
+<img src="graphs-localhost3.jpg">
+
+<br><br>
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<pre>
+
+<h1><p class="text-primary">Cluster Computations</p></h1>
+
+split - fork - join - combine with distributable data accross clusters
+
+lots of code - leads to middleware frameworks
+
+Middleware Frameworks
+	  
+	  socket
+	A -----> B
+
+	'take a look at the socket source code for linux'
+
+	A: open up a socket -> send some stuff
+	B: (server socket) wait for connection -> recieve stuff
+
+	'infiniband'
+	
+	a really good straight tcp-ip switch will get you as much bandwidth as anything else
+
+	with a socket, sending a message is maybe a 100x a memory access
+
+	Assignment 4 - Across Machines, beware of the bands.
+
+	<p class="text-danger">		DONT send strings and convert</p>
+	<p class="text-success">	DO use data store (not sent but told where to find)
+		- Hadoop - Middleware framework, map & reduce accross clusters, Hadoop File System (HFS)
+	Marshalling - A does some conversion, then send through socket, B does another conversion, finally gets service 
+		- Message Packaging Infastructure (MPI) (C)
+		- Serialization (Java), take data send, userialize
+			- need RMI (remote method invocation) 
+				1. A:b.proccess(data)
+				2. A:Fork thread for io
+				3. A:Wait for response
+	</p>
+	
+	<p class="text-warning">What about locating services?</p>
+		* MAC Addresses?
+		- need fixed address (ARP table get address for A, B;'every network has at least one node which contains the ARP table')
+<p class="text-success">		* IP-based, 'whoever claims that they are machine x, thats the one I need' : DNS</p>
+		* Cloud-based virtualize IP, NAT addressing
+
+	RPC - RMI
+	Frameworks for cluster computations
+
+	(RPC)
+		A----data, io thread--------B
+			     		    |
+		-----reply(ack, data)-------v
+		|
+		v
+
+		Note: Data have to be 'real' data
+			- value, not an object
+			- same with reply
+
+		eg
+			x = panel
+			y = b.ind(x)
+			x != y
+		
+		SEND PACKET(name of class, name of method, data)
+	
+	to avoid blocking A
+		* new Thread(()->b.process(d))
+		* f = Future(...b.process(d)).fork();
+			...
+			f.join();
+		* Async with completions (Async middleware)
+
+	USE RMI for A4
+		- have to set up a registry, copy-paste from java api tutorial
+
+	REMEMBER: throws RemoteException
+
+	Class X implements Serializable{
+		int f;
+
+		private void writeObject(ObjectWriteStream s){
+			s.defaultWriteObject();
+			s.writeInt(f);
+		}
+		
+		private void readObject(ObjectStream s){
+			s.defaultReadObject();
+			f = s.readInt();
+		}
+	}
+
+	X x = new X();
+	x.f = ()
+	s = new ObjectOutputStream(..);
+	s.writeObject(x);
+
+	//Difficult to secure since-because object forging
+
+	
+</pre>

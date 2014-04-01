@@ -1,0 +1,40 @@
+<pre>Completions & Continuations
+                  - state of the computation
+
+
+
+
+Completions 
+  //(CountedCompleter style) setPadingCount(2)
+  a,b
+  a.fork()
+  b.fork()
+  on completion(a,b) do c
+
+
+  think
+  d,e
+  d.fork
+  e.fork
+  on completiong(d,e) do f
+
+  on completion(c,f) do g
+
+  //way to keep liveness when a process cannot be completed
+  CountedCompleter //just a special forkjoin task
+  http://download.java.net/jdk8/docs/api/java/util/concurrent/CountedCompleter.html
+
+    padingCount (initially 0)
+    tryComplete
+    onCompletion(----)
+    parent //forced to be the object you complete
+
+    
+Promises, CompletableFutures //language design not algorithm design
+<a class="btn btn-primary" href="http://download.java.net/lambda/b88/docs/api/java/util/concurrent/CompletableFuture.html" target="_blank">CompletableFuture (API)</a>
+
+  a.then(b).then(c)
+  a.thenApply(b,c)
+    and
+    or
+    </pre>

@@ -1,0 +1,31 @@
+<pre>
+
+<h1 class="text-primary">SIMD Parallelism</h1><a href="http://en.wikipedia.org/wiki/SIMD" target="_blank" class="btn btn-success">SIMD wiki</a>
+
+GPUs ~ thousands of cores
+  - Good example of SIMD
+  - Static Partioning
+  - Chunks of programs
+    * fixed fork-join size
+  - limited instruction set
+    * no indirect memory --> no pointers
+  + graphics
+  - used for same calculation on multiple data --> factoring prime numbers
+  - CUDA - framework for gpu programming
+    * <a href="http://www.nvidia.com/object/cuda_home_new.html" class="btn btn-info btn-xs" target="_blank">CUDA (nvidia)</a>
+
+<h2 class="text-success">Heterogenus Parallelism</h2>
+
+FPGAs
+  - <a href="http://en.wikipedia.org/wiki/Field-programmable_gate_array" class="btn btn-warning btn-xs" target="_blank">FPGA wiki</a>
+    * 'most certain thing to happen in programming' (hp)
+  - FPGA vs ASIC
+    * ASIC programmed once
+    * FPGA 'field programmable'
+
+Liquid Metal (lime) <a href="http://researcher.watson.ibm.com/researcher/view_project.php?id=122" class="btn btn-primary btn-xs" target="_blank">LIME</a>
+  - language designed for heterogenus programs
+
+'Parallel programming in the next 10 years - Heterogenus Parallelism'
+
+</pre>

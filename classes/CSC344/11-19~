@@ -1,0 +1,34 @@
+<pre>
+<a class="btn btn-primary" href="http://www.csupomona.edu/~jrfisher/www/prolog_tutorial/contents.html">Prolog Tutorial</a>
+
+//Prolog Code
+omit(A, [B|X], [B|Z]) :- omit(A,X,Z).
+
+not(P) :- call(P), !, fail.
+not(P).
+
+/* rooms and paths */
+
+door(a,b).
+door(b,e).
+door(b,c).
+door(d,e).
+door(c,d).
+door(e,f).
+door(g,e).
+
+
+through(X,Y) :- door(X,Y).
+through(Y,X) :- door(X,Y).
+
+unvisited(X, Route) :- nonmember(X,Route).
+
+path(From, From, Route, Route). //base case
+path(From, To, Route, Route) :- through(From, To) //going from to with only 1 door
+path(From, To, Route, R) :- through(From,Middle),
+                            unvisited(Middle,Route),
+                            path(Middle,To, [Middle|Route]//prolog version of cons , R).
+
+//End Code
+
+</pre>

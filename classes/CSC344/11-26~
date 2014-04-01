@@ -1,0 +1,33 @@
+<pre>
+<h1><p class="text-success">Scripting Languages</p></h1>
+
+What?
+	DESIGN FOR EXPRESSIVITY IN CONTEXT -> low declarative -> poor scalability
+	* Errors are deferred
+
+
+Which?
+	Javascript, ActionScript
+	Python, ruby
+	Perl,
+	sh, csh, bash
+	Dos cmd shells
+
+Structured
+	Dart (halfway between js and java)
+	rPython (variant on python, fully c compatable)
+	Service APIs : BPEL			
+
+
+<h1><p class="text-primary">Python</p></h1><a href="docs.python.org/2/tutorial/introduction.html" class="btn btn-info">(Python Tutorial)</a>
+	* Object-oriented
+	* top-level interpretor
+	* function features
+	* dynamically typed
+	* extern C hooks (extend python with C code)
+	* extensible
+		- sage (math extensions)
+
+PLINT - error finding
+'find bugs'
+</pre>

@@ -1,0 +1,45 @@
+<pre>
+
+<h1><p class="text-primary">Cluster/Grid/Cloud</p></h1>
+    - Cheaper?
+    - data locality
+        * hdfs stc
+        * addressing
+            - file-stream style
+            - remote references
+            - pgas
+            - manual sockets, channels
+    - cloud analytics (move computation to data)
+        * hadoop, google map-reduce, join RMI, jini, X10, flume (Java), H20
+        
+<h2><p class="text-success">Sockets</p></h2>
+
+    A Socket must connect on a PORT
+    
+    (e.g. http 8080)
+    
+    When connected on a port, you are a 'client'
+    
+    On server side, serverSocket ('a socket factory')
+        * accept -> socket
+                 -> ObjectInputStream
+                    (a4 -
+                        have mutliple machines open up sockets to each other.
+                        they are both servers & clients.
+                        MY_PORT = 2689.
+                        to emulate 'join' just wait for socket reply.
+                        start new sockets, in their own threads.
+                    )
+
+<h2><p class="text-info">Map-reduce</p></h2>
+
+    Keyed Collections --> Maps
+    
+    reduce --> take all with same key (e.g. google, reductions are by key on results, form a webpage)
+    
+    Hadoop (keys sorted) : Google MR (not sorted)
+    
+    <h3><p class="text-warning">Hadoop</p></h3>
+    <a href="http://developer.yahoo.com/hadoop/tutorial/" class="btn btn-info" target="_blank">Hadoop Tutorial</a>
+
+</pre>

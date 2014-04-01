@@ -1,0 +1,24 @@
+<pre>
+
+
+<p class="text-success">Self:
+* Connected Android App to Web Service (4 hrs)
+	* Registration & Login Activities (3 hrs)
+	* Profile Activity (1 hr)
+* UML Diagram (1 hr) (<a href="uml.png">uml.png</a>)(<a href="neon.uml">neon.uml</a>)
+* Team Meeting (1 hr)
+* Journal\Site Update (.5 hr)
+
+Total (6.5 hrs)
+
+</p>
+
+<p class="text-warning">
+Goals for Week Six:
+* Implement UML on server-side
+* Fix moxie deployment (properly expose web methods)
+* Control LEDMatrix from Arduino
+	* Send custom text message 
+</p>
+
+</pre>

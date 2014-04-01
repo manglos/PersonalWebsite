@@ -1,0 +1,34 @@
+<pre>
+Prolog Implementation
+
+P(x) :- Q(x), ...   <-- horn clause
+     <-   
+
+P :- Q              <-- Q->P (!P^Q) 
+
+                Cognitive Normal Forms
+
+Resolution <a class="btn btn-success btn-xs" href="http://en.wikipedia.org/wiki/Resolution_(logic)" target="_blank">wiki</a>
+  <blockquote class="pull-right"><p>"Resolution is the Obsorbtion rule on steriods"</p><small>Doug Lea</small></blockquote>
+
+Unification <a class="btn btn-success btn-xs" href="http://en.wikipedia.org/wiki/Unification_(computer_science)" target="_blank">wiki</a>
+
+<p class="text-danger">embedded logic programming
+  * expert system shells (>10s, more than 1 mostly for domain specificity)
+    - JESS (Java)
+    - CLISP (C)
+    - ...
+
+</p>
+
+
+<a class="btn btn-success btn-sm" href="http://www.csupomona.edu/~jrfisher/www/prolog_tutorial/2_17.html" target="_blank">Classic AI example</a>
+  <strong>Note:</strong>
+  <ul><li>! means done</li>
+    <li>undo "forget everything you did" "sortof like clearing"</li>
+    <li>not great code, just for illustration</li>
+    <li>undo :- retract "throw away this clause"</li>
+    <li>fail "if fails goto the next matching clause of this rule"</li></ul>
+
+
+</pre>

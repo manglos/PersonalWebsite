@@ -1,0 +1,31 @@
+<pre>
+IO & Parallelism
+
+  x=f(...) vs x=read(...)
+
+  reads:
+    * fail
+    * resource control
+    * block
+    * slow 
+
+  thusly
+    |async--callback--completion
+
+  or
+    |partial completion
+    
+  
+  start a bunch of io ops
+    select
+    pull
+    waitForMultipleObjects
+
+  this leads to non-blocking IO
+                async IO
+
+
+  Discussed <a class="btn btn-success" href="http://gee.cs.oswego.edu/dl/cpjslides/nio.pdf" target="_blank">scalable IO</a>
+  Which describes (w examples) <a class="btn btn-primary" href="http://docs.oracle.com/javase/7/docs/api/java/nio/package-summary.html" target="_blank">java.nio</a>
+</pre>
+

@@ -1,0 +1,22 @@
+<pre>
+
+
+<p class="text-success">Self:
+* Started Repurposing of web-service (6 hrs)
+	* css & jquery improvements (2 hrs)
+	* added web methods for adding and controlling Mesh objects per-user (4 hrs)
+* Began Development of Android App (1 hrs)
+
+Total (7 hrs)
+
+</p>
+
+<p class="text-warning">
+Goals for Week Five:
+* Connect Android App to Web Service
+	* Registration & Login Activities
+	* Profile Activity
+* Begin Manipulating LED Matrix via Arduino
+</p>
+
+</pre>

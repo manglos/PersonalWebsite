@@ -1,0 +1,96 @@
+<pre>java ForkJoinP(roccess?)
+
+split
+	- fork
+	- join
+	- compose
+
+Fib(0) = 1
+Fib(n) = Fib(n-1) + Fib(n-2)
+
+overchecked
+	class Fib extends   {
+		final int argument;
+		int result;
+
+		public void compute(){
+
+			int n = argument;
+
+			if(n<2)
+				result = 1;
+			else{
+				Fib r = new Fib(n-2);
+				r.fork(); //whenever possible, fork -> then stuff
+				Fib l = new Fib(n-1);
+				l.invoke();
+				r.join();
+				result = l.result + r.result;
+			}
+		}
+	}	
+	f = new Fib(45).invoke();
+	f.result
+  
+  //faster
+  class Fib extends RecursiveAction {
+		final int argument;
+		int result;
+
+		public void compute(){
+
+			int n = argument;
+
+			if(n<2){
+				result = 1;
+        result = seq Fib(n);
+      }
+			else{
+				Fib r = new Fib(n-2);
+				r.fork(); //whenever possible, fork -> then stuff
+				Fib l = new Fib(n-1);
+				l.invoke();
+				r.join();
+				result = l.result + r.result;
+			}
+		}
+	}
+
+
+  //Inc Class
+  int[] array; int lo,hi;
+
+  class Inc extends RecursiveAction{
+    Inc(int[] a, int l, int h){...}
+    
+    public void compute(){
+        if(hi-lo < C){
+          for(int i=lo;i<hi;i++)
+              a[i]++; //base(---)
+        }
+        else{
+          int mit(?) = (lo+hi)>>>1; //(lo+hi)/2 may be negative
+          Inc r = new Inc(array, mid, hi);
+          Inc l = new Inc(array, lo, mid);
+          r.fork();
+          l.invoke();
+          r.join();
+          //compose(l,r); -- associative "life is better if communitive" -- a 'reduction'
+        }
+    }
+  }
+
+mapping
+  * local
+  * read-only
+
+
+#T - Deterministic Parallelism (popular)
+
+"Recursive Actions don't bear results"
+"Recursive Tasks do"
+"Always steal the task with the most work ahead of it" (steal the oldest task)
+
+http://download.java.net/jdk8/docs/api/
+* Discussed jdk 8 java.util.Stream
+</pre>
